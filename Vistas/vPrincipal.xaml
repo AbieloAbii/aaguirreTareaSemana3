@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="aaguirreTareaSemana2.Vistas.vPrincipal"
+             Title="vPrincipal">
+    <ScrollView>
+        <VerticalStackLayout Spacing="20">
+            <Label x:Name="lblUsuario" FontSize="14" HorizontalTextAlignment="End" TextColor="Magenta"></Label>
+        <Label 
+            Text="MOODLE UISRAEL"
+            FontSize="24" 
+            HorizontalOptions="Center" />
+
+        <Label Text="Primer Parcial" FontSize="20" HorizontalOptions="Start" TextColor="Magenta"></Label>
+        <Border Stroke="Magenta">
+            <Picker x:Name="pkNombres" Title="Nomina">
+                <Picker.Items>
+                    <x:String>Abiel Aguirre</x:String>
+                    <x:String>Joselyn Beltran</x:String>
+                    <x:String>Samuel Jimenez</x:String>
+                    <x:String>Pablo Caceres</x:String>
+                    <x:String>Moises Sanchez</x:String>
+                </Picker.Items>
+            </Picker>
+        
+        </Border>
+        <!-- Primer Label y Entry -->
+            <Label Text="Nota de seguimiento 1:" FontSize="20" TextColor="DarkMagenta"></Label>
+        <Border Stroke="Magenta">
+            <Entry x:Name="entryNotaSeguimiento1" Placeholder="la nota debe ser sobre 10" TextColor="Black" Keyboard="Numeric"/>
+        </Border>
+        <!-- Segundo Label y Entry -->
+        <Label Text="Examen:" FontSize="20" TextColor="DarkMagenta"></Label>
+        <Border Stroke="Magenta">
+            <Entry x:Name="entryExamen" Placeholder="la nota sobre 10" TextColor="Black" Keyboard="Numeric"/>
+        </Border>
+        <!-- Tercer Label y Entry -->
+        <Label Text="Nota Parcial 1 sobre 5:" FontSize="20" TextColor="DarkMagenta"></Label>
+        <Border Stroke="Magenta">
+            <Label x:Name="entryNotaParcial1" Text="0" IsEnabled="False" TextColor="DarkMagenta"/>
+        </Border>
+
+        
+        <Label Text="Segundo Parcial" FontSize="20" HorizontalOptions="Start" TextColor="Magenta"></Label>
+        <!-- Primer Label y Entry -->
+        <Label Text="Nota de seguimiento 2:" FontSize="20" TextColor="DarkMagenta"></Label>
+        <Border Stroke="Magenta">
+            <Entry x:Name="entryNotaSeguimiento2" Placeholder="la nota debe ser sobre 10" TextColor="Black" Keyboard="Numeric"/>
+        </Border>
+        <!-- Segundo Label y Entry -->
+        <Label Text="Examen2:" FontSize="20" TextColor="DarkMagenta"></Label>
+        <Border Stroke="Magenta">
+            <Entry x:Name="entryExamen2" Placeholder="la nota sobre 10" TextColor="Black" Keyboard="Numeric"/>
+        </Border>
+        <!-- Tercer Label y Entry -->
+        <Label Text="Nota Parcial 2 sobre 5:" FontSize="20" TextColor="DarkMagenta"></Label>
+        <Border Stroke="Magenta">
+            <Label x:Name="entryNotaParcial2" Text="0" IsEnabled="False" TextColor="DarkMagenta"/>
+        </Border>
+
+            <Label Text="Nota Parcial FINAL:" FontSize="20" TextColor="DarkMagenta"></Label>
+            <Border Stroke="Magenta">
+                <Label x:Name="NotaFinal" Text="0" FontSize="40" IsEnabled="False" TextColor="DarkBlue"/>
+            </Border>
+            <Label Text="Fecha de calificación:" FontSize="20" IsEnabled="False" TextColor="DarkMagenta"/>
+            <Border Stroke="Magenta">
+            <DatePicker x:Name="dpFecha" Format="MM/dd/yyyy"></DatePicker>
+            </Border>
+            <Button x:Name="btnCalcularNotaFinal" Text="Calcular Nota FInal" Clicked="btnCalcular_Clicked"></Button>
+            <Border Stroke="Cornsilk">
+                <Label x:Name="lblEstadoEstudiante" FontSize="20" IsEnabled="False" TextColor="DarkMagenta"/>
+            </Border>
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

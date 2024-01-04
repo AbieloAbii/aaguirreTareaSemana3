@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="aaguirreTareaSemana2.Vistas.vistaLogin"
+             Title="vistaLogin">
+    <VerticalStackLayout Spacing="20" Padding="50">
+        <Label 
+            Text="Ventana Principal"
+            HorizontalOptions="Center"
+            FontSize="18"/>
+
+        <Image Source="https://www.uisrael.edu.ec/wp-content/uploads/2020/05/logo-UISRAEL.png" WidthRequest="300"></Image>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Text="Usuario" FontSize="18" Grid.Row="0" Grid.Column="0"></Label>
+            <Entry x:Name="txtUsuario" Placeholder="Ingrese el usuario" Grid.Row="0" Grid.Column="1"></Entry>
+            <Label Text="Contraseña" FontSize="18" Grid.Row="1" Grid.Column="0"></Label>
+            <Entry x:Name="txtContrasena" Placeholder="Ingrese su contraseña" Grid.Row="1" Grid.Column="1" IsPassword="True"></Entry>
+        </Grid>
+        <Button x:Name="btnIniciar" Text="Iniciar Sesión" Clicked="btnIniciar_Clicked"></Button>
+    </VerticalStackLayout>
+</ContentPage>
